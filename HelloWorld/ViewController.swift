@@ -27,8 +27,25 @@ class ViewController: UIViewController {
 
     @IBAction func greetingButtonDidTapped() {
         greetingLabel.isHidden.toggle()
-        greetingButton.setTitle("Show Greeting", for: <#T##UIControl.State#>)
-        /* setTitle - Установить заголовок  */
+        if greetingLabel.isHidden {
+            greetingButton.setTitle("Show Greeting", for: .normal)
+        } else {
+            greetingButton.setTitle("Hide Greeting", for: .normal)
+        }
+        
+        // 30 = если greetingLabel скрыт - isHidden
+        // 31 = то нужно отоброзить Show Greeting
+        
+        // setTitle - Установить заголовок, он принимает два параметра
+         
+        /* Первый параметр с типом string, чтоб задать заголовок нужно
+         знать в каком состоянии мы находимя, для этого зададим небольшое
+         условие */
+        
+        /* Второй параметр определяет состояние, у кнопки несколько состояний, 
+         мы выбираем .normal - обычное состояние */
+        
+        // 32-33 = иначе, нужно отоброзить Hide Greeting
     }
     
 }
