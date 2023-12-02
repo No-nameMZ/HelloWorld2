@@ -27,14 +27,30 @@ class ViewController: UIViewController {
 
     @IBAction func greetingButtonDidTapped() {
         greetingLabel.isHidden.toggle()
-        if greetingLabel.isHidden {
+        greetingButton.setTitle(
+            greetingLabel.isHidden ? "Show Greeting" : "Hide Greeting",
+            for: .normal
+         )
+        
+        /* 30 = setTitle - задаем заголовок, далее задаем условие с помощью
+          тернального оператора */
+        
+        /* 31 = если greetingLabel.isHidden, ? то тогда будем отоброжать надпись
+         Show Greeting, : а иначе отобразим Hide Greeting */
+        
+        // 32 = .normal - обычное состояние
+        
+        
+        
+    /* if greetingLabel.isHidden {
             greetingButton.setTitle("Show Greeting", for: .normal)
         } else {
             greetingButton.setTitle("Hide Greeting", for: .normal)
-        }
+        } */
         
-        // 30 = если greetingLabel скрыт - isHidden
-        // 31 = то нужно отоброзить Show Greeting
+        
+        // 45 = если greetingLabel скрыт - isHidden
+        // 46 = то нужно отоброзить Show Greeting
         
         // setTitle - Установить заголовок, он принимает два параметра
          
@@ -45,7 +61,7 @@ class ViewController: UIViewController {
         /* Второй параметр определяет состояние, у кнопки несколько состояний, 
          мы выбираем .normal - обычное состояние */
         
-        // 32-33 = иначе, нужно отоброзить Hide Greeting
+        // 47-48 = иначе, нужно отоброзить Hide Greeting
     }
     
 }
